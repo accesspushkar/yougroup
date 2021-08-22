@@ -46,6 +46,22 @@ const tableColumns = [
     default: true,
   },
   {
+    field: "lat_long",
+    headerName: "Location",
+    sortable: false,
+    width: 240,
+    hide: false,
+    default: true,
+  },
+  {
+    field: "currency",
+    headerName: "Currency",
+    sortable: false,
+    width: 120,
+    hide: false,
+    default: true,
+  },
+  {
     field: "destination",
     headerName: "Destination",
     sortable: false,
