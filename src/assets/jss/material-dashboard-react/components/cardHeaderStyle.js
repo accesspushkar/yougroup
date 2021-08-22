@@ -1,4 +1,6 @@
+import { grayColor } from "assets/jss/material-dashboard-react";
 import {
+  blackCardHeader,
   warningCardHeader,
   successCardHeader,
   dangerCardHeader,
@@ -81,6 +83,12 @@ const cardHeaderStyle = {
       textAlign: "center",
       lineHeight: "33px",
       margin: "5px 4px 0px",
+    },
+  },
+  blackCardHeader: {
+    color: grayColor[0],
+    "&:not($cardHeaderIcon)": {
+      ...blackCardHeader,
     },
   },
   warningCardHeader: {

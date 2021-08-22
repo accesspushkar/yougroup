@@ -8,6 +8,7 @@ import {
   Button,
   CircularProgress,
   Box,
+  Chip,
   Grid,
   Select,
   InputLabel,
@@ -206,7 +207,7 @@ export default function Graphs({ dataSet }) {
           </AppBar>
           <Container>
             <Card chart>
-              <CardHeader color="success">
+              <CardHeader color="black">
                 <ChartistGraph
                   className="ct-chart"
                   data={chartData}
@@ -216,7 +217,21 @@ export default function Graphs({ dataSet }) {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>{product.label}</h4>
+                <Box m={1}>
+                  Legend:
+                  {!isEmpty(primaryColumn) && (
+                    <Chip
+                      label={columnLabel[primaryColumn]}
+                      variant="outlined"
+                    />
+                  )}
+                  {!isEmpty(secondaryColumn) && (
+                    <Chip
+                      label={columnLabel[secondaryColumn]}
+                      color="secondary"
+                    />
+                  )}
+                </Box>
               </CardBody>
             </Card>
           </Container>

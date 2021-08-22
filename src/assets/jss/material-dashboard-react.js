@@ -85,6 +85,14 @@ const primaryBoxShadow = {
     hexToRgb(primaryColor[0]) +
     ",.4)",
 };
+const grayBoxShadow = {
+  boxShadow:
+    "0 4px 20px 0 rgba(" +
+    hexToRgb(grayColor[0]) +
+    ",.14), 0 7px 10px -5px rgba(" +
+    hexToRgb(grayColor[0]) +
+    ",.4)",
+};
 const infoBoxShadow = {
   boxShadow:
     "0 4px 20px 0 rgba(" +
@@ -126,6 +134,10 @@ const roseBoxShadow = {
     ",.4)",
 };
 
+const blackCardHeader = {
+  background: "linear-gradient(60deg, " + blackColor + ", " + blackColor + ")",
+  ...grayBoxShadow,
+};
 const warningCardHeader = {
   background:
     "linear-gradient(60deg, " + warningColor[1] + ", " + warningColor[2] + ")",
@@ -259,6 +271,7 @@ export {
   warningBoxShadow,
   dangerBoxShadow,
   roseBoxShadow,
+  blackCardHeader,
   warningCardHeader,
   successCardHeader,
   dangerCardHeader,
