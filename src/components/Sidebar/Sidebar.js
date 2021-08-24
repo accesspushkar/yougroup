@@ -12,7 +12,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
-
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -104,7 +103,9 @@ export default function Sidebar(props) {
           }}
         >
           {brand}
-     
+          <div className={classes.sidebarWrapper}>
+            {links}
+          </div>
           {image !== undefined ? (
             <div
               className={classes.background}
@@ -118,11 +119,6 @@ export default function Sidebar(props) {
           anchor={props.rtlActive ? "right" : "left"}
           variant="permanent"
           open
-          classes={{
-            paper: classNames(classes.drawerPaper, {
-              [classes.drawerPaperRTL]: props.rtlActive,
-            }),
-          }}
         >
           {brand}
           <div className={classes.sidebarWrapper}>{links}</div>
